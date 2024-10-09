@@ -26,14 +26,14 @@ remote = "fluendo"
 name = "tests2"
 summary = "Update more tests. Second round"
 pr = "https://gitlab.freedesktop.org/gstreamer/cerbero/-/merge_requests/1477"
-status = "merging"
+status = "integrated"
 
 [[features]]
 remote = "fluendo"
 name = "tests3"
 summary = "Tests update final round"
 pr = "https://gitlab.freedesktop.org/gstreamer/cerbero/-/merge_requests/1482"
-status = "pending"
+status = "merging"
 
 [[features]]
 remote = "fluendo"
