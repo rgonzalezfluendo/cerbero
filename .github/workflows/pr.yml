@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print info
+        run: |
+          echo "Origin branch (head): ${{ github.event.pull_request.head.ref }}"
+          echo "Target branch (base): ${{ github.event.pull_request.base.ref }}"
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+      - name: Checkout GUW
+        run: |
+          git clone https://github.com/fluendo/git-upstream-workflow.git
+          cd git-upstream-workflow
+          git show -1
+          poetry install
+          poetry run pytest -v
