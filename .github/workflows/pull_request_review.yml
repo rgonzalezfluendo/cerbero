@@ -1,10 +1,10 @@
-name: Test PR
+name: Test Pull Request Review
 
 on:
-  pull_request:
+  pull_request_review:
 
 jobs:
-  test:
+  test2:
     runs-on: ubuntu-latest
     steps:
       - name: Print info
